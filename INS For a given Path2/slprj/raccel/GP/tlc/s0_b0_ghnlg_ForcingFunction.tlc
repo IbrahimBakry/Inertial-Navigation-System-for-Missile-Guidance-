@@ -1,0 +1,38 @@
+%implements s0_b0_ghnlg_ForcingFunction "C"
+
+%function ForcingFunction(block, system) Output
+%assign tlcForcingFunctionFcnOfS0B2 = OpaqueTLCBlockFcn("ForcingFunction", 0, 2, 0, 7)
+%assign tlcForcingFunctionFcnOfS0B3 = OpaqueTLCBlockFcn("ForcingFunction", 0, 3, 0, 7)
+%assign tlcForcingFunctionFcnOfS0B4 = OpaqueTLCBlockFcn("ForcingFunction", 0, 4, 0, 7)
+%assign tlcForcingFunctionFcnOfS0B15 = OpaqueTLCBlockFcn("ForcingFunction", 0, 15, 0, 7)
+%assign tlcForcingFunctionFcnOfS0B17 = OpaqueTLCBlockFcn("ForcingFunction", 0, 17, 0, 7)
+%assign tlcForcingFunctionFcnOfS0B19 = OpaqueTLCBlockFcn("ForcingFunction", 0, 19, 0, 7)
+%assign tlcForcingFunctionFcnOfS0B20 = OpaqueTLCBlockFcn("ForcingFunction", 0, 20, 0, 7)
+%assign tlcForcingFunctionFcnOfS0B21 = OpaqueTLCBlockFcn("ForcingFunction", 0, 21, 0, 7)
+%assign tlcForcingFunctionFcnOfS0B22 = OpaqueTLCBlockFcn("ForcingFunction", 0, 22, 0, 7)
+%assign tlcForcingFunctionFcnOfS0B23 = OpaqueTLCBlockFcn("ForcingFunction", 0, 23, 0, 7)
+%assign tlcForcingFunctionFcnOfS0B24 = OpaqueTLCBlockFcn("ForcingFunction", 0, 24, 0, 7)
+%assign tlcForcingFunctionFcnOfS0B25 = OpaqueTLCBlockFcn("ForcingFunction", 0, 25, 0, 7)
+%assign tlcForcingFunctionFcnOfS0B31 = OpaqueTLCBlockFcn("ForcingFunction", 0, 31, 0, 7)
+%assign tlcForcingFunctionFcnOfS0B41 = OpaqueTLCBlockFcn("ForcingFunction", 0, 41, 0, 7)
+%<tlcForcingFunctionFcnOfS0B2>\
+%<tlcForcingFunctionFcnOfS0B3>\
+%<tlcForcingFunctionFcnOfS0B4>\
+%<tlcForcingFunctionFcnOfS0B15>\
+%<tlcForcingFunctionFcnOfS0B17>\
+%<tlcForcingFunctionFcnOfS0B19>\
+%<tlcForcingFunctionFcnOfS0B20>\
+%<tlcForcingFunctionFcnOfS0B21>\
+%<tlcForcingFunctionFcnOfS0B22>\
+%<tlcForcingFunctionFcnOfS0B23>\
+%<tlcForcingFunctionFcnOfS0B24>\
+%<tlcForcingFunctionFcnOfS0B25>\
+%<tlcForcingFunctionFcnOfS0B31>\
+%<tlcForcingFunctionFcnOfS0B41>\
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ForcingFunction(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 7, fcnProtoType)>
+%endfunction

@@ -1,0 +1,42 @@
+%implements s0_b0_ghnlg_InitializeConditions "C"
+
+%function InitializeConditions(block, system) Output
+%assign tlcInitializeConditionsFcnOfS0B2 = OpaqueTLCBlockFcn("InitializeConditions", 0, 2, 0, 3)
+%assign tlcInitializeConditionsFcnOfS0B3 = OpaqueTLCBlockFcn("InitializeConditions", 0, 3, 0, 3)
+%assign tlcInitializeConditionsFcnOfS0B4 = OpaqueTLCBlockFcn("InitializeConditions", 0, 4, 0, 3)
+%assign tlcInitializeConditionsFcnOfS0B10 = OpaqueTLCBlockFcn("InitializeConditions", 0, 10, 0, 3)
+%assign tlcInitializeConditionsFcnOfS0B15 = OpaqueTLCBlockFcn("InitializeConditions", 0, 15, 0, 3)
+%assign tlcInitializeConditionsFcnOfS0B17 = OpaqueTLCBlockFcn("InitializeConditions", 0, 17, 0, 3)
+%assign tlcInitializeConditionsFcnOfS0B19 = OpaqueTLCBlockFcn("InitializeConditions", 0, 19, 0, 3)
+%assign tlcInitializeConditionsFcnOfS0B20 = OpaqueTLCBlockFcn("InitializeConditions", 0, 20, 0, 3)
+%assign tlcInitializeConditionsFcnOfS0B21 = OpaqueTLCBlockFcn("InitializeConditions", 0, 21, 0, 3)
+%assign tlcInitializeConditionsFcnOfS0B22 = OpaqueTLCBlockFcn("InitializeConditions", 0, 22, 0, 3)
+%assign tlcInitializeConditionsFcnOfS0B23 = OpaqueTLCBlockFcn("InitializeConditions", 0, 23, 0, 3)
+%assign tlcInitializeConditionsFcnOfS0B24 = OpaqueTLCBlockFcn("InitializeConditions", 0, 24, 0, 3)
+%assign tlcInitializeConditionsFcnOfS0B25 = OpaqueTLCBlockFcn("InitializeConditions", 0, 25, 0, 3)
+%assign tlcInitializeConditionsFcnOfS0B31 = OpaqueTLCBlockFcn("InitializeConditions", 0, 31, 0, 3)
+%assign tlcInitializeConditionsFcnOfS0B41 = OpaqueTLCBlockFcn("InitializeConditions", 0, 41, 0, 3)
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+%<tlcInitializeConditionsFcnOfS0B2>\
+%<tlcInitializeConditionsFcnOfS0B3>\
+%<tlcInitializeConditionsFcnOfS0B4>\
+%<tlcInitializeConditionsFcnOfS0B10>\
+%<tlcInitializeConditionsFcnOfS0B15>\
+%<tlcInitializeConditionsFcnOfS0B17>\
+%<tlcInitializeConditionsFcnOfS0B19>\
+%<tlcInitializeConditionsFcnOfS0B20>\
+%<tlcInitializeConditionsFcnOfS0B21>\
+%<tlcInitializeConditionsFcnOfS0B22>\
+%<tlcInitializeConditionsFcnOfS0B23>\
+%<tlcInitializeConditionsFcnOfS0B24>\
+%<tlcInitializeConditionsFcnOfS0B25>\
+%<tlcInitializeConditionsFcnOfS0B31>\
+%<tlcInitializeConditionsFcnOfS0B41>\
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void InitializeConditions(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 3, fcnProtoType)>
+%endfunction

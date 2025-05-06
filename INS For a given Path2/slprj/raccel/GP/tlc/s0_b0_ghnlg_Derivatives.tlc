@@ -1,0 +1,38 @@
+%implements s0_b0_ghnlg_Derivatives "C"
+
+%function Derivatives(block, system) Output
+%assign tlcDerivativesFcnOfS0B2 = OpaqueTLCBlockFcn("Derivatives", 0, 2, 0, 6)
+%assign tlcDerivativesFcnOfS0B3 = OpaqueTLCBlockFcn("Derivatives", 0, 3, 0, 6)
+%assign tlcDerivativesFcnOfS0B4 = OpaqueTLCBlockFcn("Derivatives", 0, 4, 0, 6)
+%assign tlcDerivativesFcnOfS0B15 = OpaqueTLCBlockFcn("Derivatives", 0, 15, 0, 6)
+%assign tlcDerivativesFcnOfS0B17 = OpaqueTLCBlockFcn("Derivatives", 0, 17, 0, 6)
+%assign tlcDerivativesFcnOfS0B19 = OpaqueTLCBlockFcn("Derivatives", 0, 19, 0, 6)
+%assign tlcDerivativesFcnOfS0B20 = OpaqueTLCBlockFcn("Derivatives", 0, 20, 0, 6)
+%assign tlcDerivativesFcnOfS0B21 = OpaqueTLCBlockFcn("Derivatives", 0, 21, 0, 6)
+%assign tlcDerivativesFcnOfS0B22 = OpaqueTLCBlockFcn("Derivatives", 0, 22, 0, 6)
+%assign tlcDerivativesFcnOfS0B23 = OpaqueTLCBlockFcn("Derivatives", 0, 23, 0, 6)
+%assign tlcDerivativesFcnOfS0B24 = OpaqueTLCBlockFcn("Derivatives", 0, 24, 0, 6)
+%assign tlcDerivativesFcnOfS0B25 = OpaqueTLCBlockFcn("Derivatives", 0, 25, 0, 6)
+%assign tlcDerivativesFcnOfS0B31 = OpaqueTLCBlockFcn("Derivatives", 0, 31, 0, 6)
+%assign tlcDerivativesFcnOfS0B41 = OpaqueTLCBlockFcn("Derivatives", 0, 41, 0, 6)
+%<tlcDerivativesFcnOfS0B2>\
+%<tlcDerivativesFcnOfS0B3>\
+%<tlcDerivativesFcnOfS0B4>\
+%<tlcDerivativesFcnOfS0B15>\
+%<tlcDerivativesFcnOfS0B17>\
+%<tlcDerivativesFcnOfS0B19>\
+%<tlcDerivativesFcnOfS0B20>\
+%<tlcDerivativesFcnOfS0B21>\
+%<tlcDerivativesFcnOfS0B22>\
+%<tlcDerivativesFcnOfS0B23>\
+%<tlcDerivativesFcnOfS0B24>\
+%<tlcDerivativesFcnOfS0B25>\
+%<tlcDerivativesFcnOfS0B31>\
+%<tlcDerivativesFcnOfS0B41>\
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Derivatives(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 6, fcnProtoType)>
+%endfunction

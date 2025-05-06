@@ -1,0 +1,33 @@
+%implements s0_b0_ghnlg_ZeroCrossings "C"
+
+%function ZeroCrossings(block, system) Output
+%<SLibCG_TrackZCSV(0)>\
+_rtZCSV = %<(SLibCG_SE(SLibGetZCSignalValueStrucPtr()))>;
+%<SLibCG_TrackParam(0)>\
+%<SLibCG_TrackBlockIO(0)>\
+_rtZCSV->lu5ybuwvcf[0] = rtB.b2hrmywcw2[0] - rtP.Saturation_UpperSat[0];
+_rtZCSV->ak2qveyxpd[0] = rtB.b2hrmywcw2[0] - rtP.Saturation_LowerSat[0];
+_rtZCSV->lu5ybuwvcf[1] = rtB.b2hrmywcw2[1] - rtP.Saturation_UpperSat[1];
+_rtZCSV->ak2qveyxpd[1] = rtB.b2hrmywcw2[1] - rtP.Saturation_LowerSat[1];
+_rtZCSV->lu5ybuwvcf[2] = rtB.b2hrmywcw2[2] - rtP.Saturation_UpperSat[2];
+_rtZCSV->ak2qveyxpd[2] = rtB.b2hrmywcw2[2] - rtP.Saturation_LowerSat[2];
+_rtZCSV->ptry4wkhb0[0] = rtB.dnk2o3dbko[0] - rtP.Saturation_UpperSat_lfd2mrqf0x[0];
+_rtZCSV->hidr2et5gm[0] = rtB.dnk2o3dbko[0] - rtP.Saturation_LowerSat_d4irhfgygb[0];
+_rtZCSV->ptry4wkhb0[1] = rtB.dnk2o3dbko[1] - rtP.Saturation_UpperSat_lfd2mrqf0x[1];
+_rtZCSV->hidr2et5gm[1] = rtB.dnk2o3dbko[1] - rtP.Saturation_LowerSat_d4irhfgygb[1];
+_rtZCSV->ptry4wkhb0[2] = rtB.dnk2o3dbko[2] - rtP.Saturation_UpperSat_lfd2mrqf0x[2];
+_rtZCSV->hidr2et5gm[2] = rtB.dnk2o3dbko[2] - rtP.Saturation_LowerSat_d4irhfgygb[2];
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ZeroCrossings(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 8, fcnProtoType)>
+
+%assign localVarDecl = ""
+%openfile localVarDecl
+ZCV *_rtZCSV;
+
+%closefile localVarDecl
+%<LibSetSystemField(system, "CachedZeroCrossingLocalVars", localVarDecl)>
+%endfunction

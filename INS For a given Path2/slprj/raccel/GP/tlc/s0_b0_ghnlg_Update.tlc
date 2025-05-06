@@ -1,0 +1,78 @@
+%implements s0_b0_ghnlg_Update "C"
+
+%function Update(block, system) Output
+%assign _modelSS = ""
+
+%assign tlcUpdateFcnOfS0B2 = OpaqueTLCBlockFcn("Update", 0, 2, 0, 5)
+%assign tlcUpdateFcnOfS0B3 = OpaqueTLCBlockFcn("Update", 0, 3, 0, 5)
+%assign tlcUpdateFcnOfS0B4 = OpaqueTLCBlockFcn("Update", 0, 4, 0, 5)
+%assign tlcUpdateFcnOfS0B10 = OpaqueTLCBlockFcn("Update", 0, 10, 0, 5)
+%assign tlcUpdateFcnOfS0B15 = OpaqueTLCBlockFcn("Update", 0, 15, 0, 5)
+%assign tlcUpdateFcnOfS0B17 = OpaqueTLCBlockFcn("Update", 0, 17, 0, 5)
+%assign tlcUpdateFcnOfS0B19 = OpaqueTLCBlockFcn("Update", 0, 19, 0, 5)
+%assign tlcUpdateFcnOfS0B20 = OpaqueTLCBlockFcn("Update", 0, 20, 0, 5)
+%assign tlcUpdateFcnOfS0B21 = OpaqueTLCBlockFcn("Update", 0, 21, 0, 5)
+%assign tlcUpdateFcnOfS0B22 = OpaqueTLCBlockFcn("Update", 0, 22, 0, 5)
+%assign tlcUpdateFcnOfS0B23 = OpaqueTLCBlockFcn("Update", 0, 23, 0, 5)
+%assign tlcUpdateFcnOfS0B24 = OpaqueTLCBlockFcn("Update", 0, 24, 0, 5)
+%assign tlcUpdateFcnOfS0B25 = OpaqueTLCBlockFcn("Update", 0, 25, 0, 5)
+%assign tlcUpdateFcnOfS0B31 = OpaqueTLCBlockFcn("Update", 0, 31, 0, 5)
+%assign tlcUpdateFcnOfS0B41 = OpaqueTLCBlockFcn("Update", 0, 41, 0, 5)
+%<SLibCG_TrackDW(0)>\
+%<SLibCG_TrackParam(0)>\
+%<tlcUpdateFcnOfS0B2>\
+%<tlcUpdateFcnOfS0B3>\
+%<tlcUpdateFcnOfS0B4>\
+%<tlcUpdateFcnOfS0B10>\
+if (%<(SLibCGIRIsSampleHit(2, 0))>) {
+%if SLibCG_FcnCallArgAccessed(0,5,0,0)
+%<SLibCG_TrackDW(0)>
+%endif
+
+    rtDW.gotpjnrhm5[0] = %<(SLibCGCallSubFcn("rt_nrand_Upu32_Yd_f_pw_snf", ["&rtDW.cwhke1ltt4[0]"], 0, 5, 0))> * rtP.WhiteNoise_StdDev + rtP.WhiteNoise_Mean;
+%if SLibCG_FcnCallArgAccessed(0,5,1,0)
+%<SLibCG_TrackDW(0)>
+%endif
+
+    rtDW.gotpjnrhm5[1] = %<(SLibCGCallSubFcn("rt_nrand_Upu32_Yd_f_pw_snf", ["&rtDW.cwhke1ltt4[1]"], 0, 5, 1))> * rtP.WhiteNoise_StdDev + rtP.WhiteNoise_Mean;
+%if SLibCG_FcnCallArgAccessed(0,5,2,0)
+%<SLibCG_TrackDW(0)>
+%endif
+
+    rtDW.gotpjnrhm5[2] = %<(SLibCGCallSubFcn("rt_nrand_Upu32_Yd_f_pw_snf", ["&rtDW.cwhke1ltt4[2]"], 0, 5, 2))> * rtP.WhiteNoise_StdDev + rtP.WhiteNoise_Mean;
+}
+%<tlcUpdateFcnOfS0B15>\
+%<tlcUpdateFcnOfS0B17>\
+%<tlcUpdateFcnOfS0B19>\
+%<tlcUpdateFcnOfS0B20>\
+%<tlcUpdateFcnOfS0B21>\
+%<tlcUpdateFcnOfS0B22>\
+%<tlcUpdateFcnOfS0B23>\
+%<tlcUpdateFcnOfS0B24>\
+%<tlcUpdateFcnOfS0B25>\
+if (%<(SLibCGIRIsSampleHit(2, 0))>) {
+%if SLibCG_FcnCallArgAccessed(0,5,3,0)
+%<SLibCG_TrackDW(0)>
+%endif
+
+    rtDW.okwhqgsecf[0] = %<(SLibCGCallSubFcn("rt_nrand_Upu32_Yd_f_pw_snf", ["&rtDW.l4yy3jq445[0]"], 0, 5, 3))> * rtP.WhiteNoise_StdDev_kpyk3wz4sf + rtP.WhiteNoise_Mean_dmzkxfbhve;
+%if SLibCG_FcnCallArgAccessed(0,5,4,0)
+%<SLibCG_TrackDW(0)>
+%endif
+
+    rtDW.okwhqgsecf[1] = %<(SLibCGCallSubFcn("rt_nrand_Upu32_Yd_f_pw_snf", ["&rtDW.l4yy3jq445[1]"], 0, 5, 4))> * rtP.WhiteNoise_StdDev_kpyk3wz4sf + rtP.WhiteNoise_Mean_dmzkxfbhve;
+%if SLibCG_FcnCallArgAccessed(0,5,5,0)
+%<SLibCG_TrackDW(0)>
+%endif
+
+    rtDW.okwhqgsecf[2] = %<(SLibCGCallSubFcn("rt_nrand_Upu32_Yd_f_pw_snf", ["&rtDW.l4yy3jq445[2]"], 0, 5, 5))> * rtP.WhiteNoise_StdDev_kpyk3wz4sf + rtP.WhiteNoise_Mean_dmzkxfbhve;
+}
+%<tlcUpdateFcnOfS0B31>\
+%<tlcUpdateFcnOfS0B41>\
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 5, fcnProtoType)>
+%endfunction

@@ -1,0 +1,182 @@
+%implements s0_b0_ghnlg_Start "C"
+
+%function Start(block, system) Output
+%assign _modelSS = ""
+
+%assign tlcStartFcnOfS0B12 = OpaqueTLCBlockFcn("Start", 0, 12, 0, 2)
+%assign tlcStartFcnOfS0B13 = OpaqueTLCBlockFcn("Start", 0, 13, 0, 2)
+%assign tlcStartFcnOfS0B14 = OpaqueTLCBlockFcn("Start", 0, 14, 0, 2)
+%assign tlcStartFcnOfS0B32 = OpaqueTLCBlockFcn("Start", 0, 32, 0, 2)
+%assign tlcStartFcnOfS0B33 = OpaqueTLCBlockFcn("Start", 0, 33, 0, 2)
+%assign tlcStartFcnOfS0B34 = OpaqueTLCBlockFcn("Start", 0, 34, 0, 2)
+%assign tlcStartFcnOfS0B35 = OpaqueTLCBlockFcn("Start", 0, 35, 0, 2)
+%assign tlcStartFcnOfS0B36 = OpaqueTLCBlockFcn("Start", 0, 36, 0, 2)
+%assign tlcStartFcnOfS0B37 = OpaqueTLCBlockFcn("Start", 0, 37, 0, 2)
+%assign tlcStartFcnOfS0B38 = OpaqueTLCBlockFcn("Start", 0, 38, 0, 2)
+%<SLibCG_TrackDW(0)>\
+%<SLibCG_TrackParam(0)>\
+tmp = muDoubleScalarFloor(rtP.WhiteNoise_Seed[0]);
+if (muDoubleScalarIsNaN(tmp) || muDoubleScalarIsInf(tmp)) {
+    tmp = 0.0;
+} else {
+    tmp = muDoubleScalarRem(tmp, 4.294967296E+9);
+}
+tseed = tmp < 0.0 ? (uint32_T)-(int32_T)(uint32_T)-tmp : (uint32_T)tmp;
+r = (int32_T)(tseed >> 16U);
+t = (int32_T)(tseed & 32768U);
+tseed = ((((tseed - ((uint32_T)r << 16U)) + t) << 16U) + t) + r;
+if (tseed < 1U) {
+    tseed = 1144108930U;
+} else {
+    if (tseed > 2147483646U) {
+        tseed = 2147483646U;
+    }
+}
+rtDW.cwhke1ltt4[0] = tseed;
+%if SLibCG_FcnCallArgAccessed(0,2,0,0)
+%<SLibCG_TrackDW(0)>
+%endif
+
+rtDW.gotpjnrhm5[0] = %<(SLibCGCallSubFcn("rt_nrand_Upu32_Yd_f_pw_snf", ["&rtDW.cwhke1ltt4[0]"], 0, 2, 0))> * rtP.WhiteNoise_StdDev + rtP.WhiteNoise_Mean;
+tmp = muDoubleScalarFloor(rtP.WhiteNoise_Seed[1]);
+if (muDoubleScalarIsNaN(tmp) || muDoubleScalarIsInf(tmp)) {
+    tmp = 0.0;
+} else {
+    tmp = muDoubleScalarRem(tmp, 4.294967296E+9);
+}
+tseed = tmp < 0.0 ? (uint32_T)-(int32_T)(uint32_T)-tmp : (uint32_T)tmp;
+r = (int32_T)(tseed >> 16U);
+t = (int32_T)(tseed & 32768U);
+tseed = ((((tseed - ((uint32_T)r << 16U)) + t) << 16U) + t) + r;
+if (tseed < 1U) {
+    tseed = 1144108930U;
+} else {
+    if (tseed > 2147483646U) {
+        tseed = 2147483646U;
+    }
+}
+rtDW.cwhke1ltt4[1] = tseed;
+%if SLibCG_FcnCallArgAccessed(0,2,1,0)
+%<SLibCG_TrackDW(0)>
+%endif
+
+rtDW.gotpjnrhm5[1] = %<(SLibCGCallSubFcn("rt_nrand_Upu32_Yd_f_pw_snf", ["&rtDW.cwhke1ltt4[1]"], 0, 2, 1))> * rtP.WhiteNoise_StdDev + rtP.WhiteNoise_Mean;
+tmp = muDoubleScalarFloor(rtP.WhiteNoise_Seed[2]);
+if (muDoubleScalarIsNaN(tmp) || muDoubleScalarIsInf(tmp)) {
+    tmp = 0.0;
+} else {
+    tmp = muDoubleScalarRem(tmp, 4.294967296E+9);
+}
+tseed = tmp < 0.0 ? (uint32_T)-(int32_T)(uint32_T)-tmp : (uint32_T)tmp;
+r = (int32_T)(tseed >> 16U);
+t = (int32_T)(tseed & 32768U);
+tseed = ((((tseed - ((uint32_T)r << 16U)) + t) << 16U) + t) + r;
+if (tseed < 1U) {
+    tseed = 1144108930U;
+} else {
+    if (tseed > 2147483646U) {
+        tseed = 2147483646U;
+    }
+}
+rtDW.cwhke1ltt4[2] = tseed;
+%if SLibCG_FcnCallArgAccessed(0,2,2,0)
+%<SLibCG_TrackDW(0)>
+%endif
+
+rtDW.gotpjnrhm5[2] = %<(SLibCGCallSubFcn("rt_nrand_Upu32_Yd_f_pw_snf", ["&rtDW.cwhke1ltt4[2]"], 0, 2, 2))> * rtP.WhiteNoise_StdDev + rtP.WhiteNoise_Mean;
+%<tlcStartFcnOfS0B12>\
+%<tlcStartFcnOfS0B13>\
+%<tlcStartFcnOfS0B14>\
+tmp = muDoubleScalarFloor(rtP.WhiteNoise_Seed_ovcixp4pym[0]);
+if (muDoubleScalarIsNaN(tmp) || muDoubleScalarIsInf(tmp)) {
+    tmp = 0.0;
+} else {
+    tmp = muDoubleScalarRem(tmp, 4.294967296E+9);
+}
+tseed = tmp < 0.0 ? (uint32_T)-(int32_T)(uint32_T)-tmp : (uint32_T)tmp;
+r = (int32_T)(tseed >> 16U);
+t = (int32_T)(tseed & 32768U);
+tseed = ((((tseed - ((uint32_T)r << 16U)) + t) << 16U) + t) + r;
+if (tseed < 1U) {
+    tseed = 1144108930U;
+} else {
+    if (tseed > 2147483646U) {
+        tseed = 2147483646U;
+    }
+}
+rtDW.l4yy3jq445[0] = tseed;
+%if SLibCG_FcnCallArgAccessed(0,2,3,0)
+%<SLibCG_TrackDW(0)>
+%endif
+
+rtDW.okwhqgsecf[0] = %<(SLibCGCallSubFcn("rt_nrand_Upu32_Yd_f_pw_snf", ["&rtDW.l4yy3jq445[0]"], 0, 2, 3))> * rtP.WhiteNoise_StdDev_kpyk3wz4sf + rtP.WhiteNoise_Mean_dmzkxfbhve;
+tmp = muDoubleScalarFloor(rtP.WhiteNoise_Seed_ovcixp4pym[1]);
+if (muDoubleScalarIsNaN(tmp) || muDoubleScalarIsInf(tmp)) {
+    tmp = 0.0;
+} else {
+    tmp = muDoubleScalarRem(tmp, 4.294967296E+9);
+}
+tseed = tmp < 0.0 ? (uint32_T)-(int32_T)(uint32_T)-tmp : (uint32_T)tmp;
+r = (int32_T)(tseed >> 16U);
+t = (int32_T)(tseed & 32768U);
+tseed = ((((tseed - ((uint32_T)r << 16U)) + t) << 16U) + t) + r;
+if (tseed < 1U) {
+    tseed = 1144108930U;
+} else {
+    if (tseed > 2147483646U) {
+        tseed = 2147483646U;
+    }
+}
+rtDW.l4yy3jq445[1] = tseed;
+%if SLibCG_FcnCallArgAccessed(0,2,4,0)
+%<SLibCG_TrackDW(0)>
+%endif
+
+rtDW.okwhqgsecf[1] = %<(SLibCGCallSubFcn("rt_nrand_Upu32_Yd_f_pw_snf", ["&rtDW.l4yy3jq445[1]"], 0, 2, 4))> * rtP.WhiteNoise_StdDev_kpyk3wz4sf + rtP.WhiteNoise_Mean_dmzkxfbhve;
+tmp = muDoubleScalarFloor(rtP.WhiteNoise_Seed_ovcixp4pym[2]);
+if (muDoubleScalarIsNaN(tmp) || muDoubleScalarIsInf(tmp)) {
+    tmp = 0.0;
+} else {
+    tmp = muDoubleScalarRem(tmp, 4.294967296E+9);
+}
+tseed = tmp < 0.0 ? (uint32_T)-(int32_T)(uint32_T)-tmp : (uint32_T)tmp;
+r = (int32_T)(tseed >> 16U);
+t = (int32_T)(tseed & 32768U);
+tseed = ((((tseed - ((uint32_T)r << 16U)) + t) << 16U) + t) + r;
+if (tseed < 1U) {
+    tseed = 1144108930U;
+} else {
+    if (tseed > 2147483646U) {
+        tseed = 2147483646U;
+    }
+}
+rtDW.l4yy3jq445[2] = tseed;
+%if SLibCG_FcnCallArgAccessed(0,2,5,0)
+%<SLibCG_TrackDW(0)>
+%endif
+
+rtDW.okwhqgsecf[2] = %<(SLibCGCallSubFcn("rt_nrand_Upu32_Yd_f_pw_snf", ["&rtDW.l4yy3jq445[2]"], 0, 2, 5))> * rtP.WhiteNoise_StdDev_kpyk3wz4sf + rtP.WhiteNoise_Mean_dmzkxfbhve;
+%<tlcStartFcnOfS0B32>\
+%<tlcStartFcnOfS0B33>\
+%<tlcStartFcnOfS0B34>\
+%<tlcStartFcnOfS0B35>\
+%<tlcStartFcnOfS0B36>\
+%<tlcStartFcnOfS0B37>\
+%<tlcStartFcnOfS0B38>\
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 2, fcnProtoType)>
+
+%assign localVarDecl = ""
+%openfile localVarDecl
+uint32_T tseed;
+int32_T r;
+int32_T t;
+real_T tmp;
+
+%closefile localVarDecl
+%<LibSetSystemField(system, "CachedStartLocalVars", localVarDecl)>
+%endfunction
